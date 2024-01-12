@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="392.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserInformController">
+    <children>
+        <Text fill="#5c8ef2" layoutX="65.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Inform" textAlignment="CENTER" wrappingWidth="202.36328125">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="35.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="96.0" fitWidth="92.0" layoutX="120.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Image/MainMenuButton/user.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="name" fill="#575656" layoutX="66.0" layoutY="194.0" textAlignment="CENTER" wrappingWidth="199.99999734759336">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font></Text>
+      <Separator layoutX="66.0" layoutY="205.0" prefWidth="200.0" />
+        <Text fx:id="email" fill="#827e7e" layoutX="39.0" layoutY="220.0" textAlignment="CENTER" wrappingWidth="254.39999631047255">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+        <Text fill="#1265ff" layoutX="95.0" layoutY="255.0" text="Uploaded data sets:" textAlignment="CENTER" wrappingWidth="141.1875">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Text>
+      <ScrollPane layoutX="60.0" layoutY="260.0" prefHeight="117.0" prefWidth="210.0" stylesheets="@../CSS/MainWindow.css">
+         <content>
+            <VBox fx:id="vbox" maxHeight="113.0" prefHeight="110.0" prefWidth="186.0" stylesheets="@../CSS/MainWindow.css" />
+         </content>
+      </ScrollPane>
+
+    </children>
+</AnchorPane>

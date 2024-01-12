@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="313.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+    <Text fill="#5c8ef2" layoutX="77.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About" textAlignment="CENTER" wrappingWidth="120.36328125">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="35.0" />
+        </font>
+    </Text>
+      <ImageView fitHeight="49.0" fitWidth="200.0" layoutX="189.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="@../Image/MainMenuButton/logo2.png" />
+          </image>
+      </ImageView>
+      <TextArea editable="false" layoutX="27.0" layoutY="87.0" prefHeight="198.0" prefWidth="365.0" text="Beaver aims to allow researchers and financial institutions to validate dynamic models and use dynamic models to predict future default rates, while also allowing end users to add different stress test scenarios and to observe the effect of the stress test on the test data set." wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.3607843220233917" green="0.5568627715110779" blue="0.9490196108818054" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TextArea>
+    </children>
+
+</AnchorPane>

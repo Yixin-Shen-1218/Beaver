@@ -1,0 +1,13 @@
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+.chart-title{
+-fx-text-fill: #4682b4;
+}
+
+.chart-alternative-row-fill {
+    -fx-fill: #BFC5FF;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignInController">
+   <children>
+      <Text fill="#5c8ef2" layoutX="158.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER" wrappingWidth="143.36328125">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="#5c8ef2" layoutX="64.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name or Email" wrappingWidth="157.375">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#5c8ef2" layoutX="64.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="64.0" layoutY="137.0" prefHeight="15.0" prefWidth="330.0" styleClass="textField2" stylesheets="@../CSS/SignIn_Up.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="-2.0" />
+         </padding>
+      </TextField>
+      <PasswordField fx:id="password" layoutX="64.0" layoutY="222.0" prefHeight="4.0" prefWidth="330.0" styleClass="textField2" stylesheets="@../CSS/SignIn_Up.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="-2.0" />
+         </padding>
+      </PasswordField>
+      <Button fx:id="SetPasswordBtn" alignment="BOTTOM_LEFT" layoutX="54.0" layoutY="270.0" mnemonicParsing="false" onAction="#jumpToSetPassword" prefHeight="23.0" prefWidth="273.0" styleClass="button2" stylesheets="@../CSS/SignIn_Up.css" text="Can't access your account?" textFill="#333436a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="SignInBtn" alignment="CENTER" layoutX="64.0" layoutY="310.0" mnemonicParsing="false" onAction="#signIn" prefHeight="41.0" prefWidth="330.0" styleClass="button1" stylesheets="@../CSS/SignIn_Up.css" text="Sign In" textFill="#fcf6f6">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="19.0" />
+         </font>
+      </Button>
+      <Text fill="#222224b3" layoutX="64.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have a BEAVER account?" />
+      <Button id="toSignUp" fx:id="SignUpBtn" alignment="BOTTOM_LEFT" layoutX="243.0" layoutY="375.0" mnemonicParsing="false" onAction="#jumpToSignUp" prefHeight="23.0" prefWidth="113.0" styleClass="button2" stylesheets="@../CSS/SignIn_Up.css" text="Sign up now!" textFill="#5675bc" />
+      <Separator layoutX="65.0" layoutY="415.0" prefHeight="4.0" prefWidth="330.0" />
+      <Button fx:id="TermsBtn" layoutX="128.0" layoutY="422.0" mnemonicParsing="false" onAction="#seeTerms" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: rgba(0,0,0,0.0);" stylesheets="@../CSS/SignIn_Up.css" text="Terms" textFill="#0000008d">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Separator layoutX="178.0" layoutY="422.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="3.0" />
+      <Button fx:id="DataPolicyBtn" layoutX="181.0" layoutY="422.0" mnemonicParsing="false" onAction="#seeDataPolicy" prefHeight="23.0" prefWidth="81.0" style="-fx-background-color: rgba(0,0,0,0.0);" stylesheets="@../CSS/SignIn_Up.css" text="Data Policy" textFill="#0000008d">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Separator layoutX="259.0" layoutY="422.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="3.0" />
+      <Button fx:id="WebBtn" layoutX="261.0" layoutY="422.0" mnemonicParsing="false" onAction="#seeWebPage" prefHeight="23.0" prefWidth="81.0" style="-fx-background-color: rgba(0,0,0,0.0);" stylesheets="@../CSS/SignIn_Up.css" text="About Us" textFill="#0000008d">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Label fx:id="ueNotice" layoutX="65.0" layoutY="160.0" prefHeight="15.0" prefWidth="330.0" textFill="#dd0b0b" />
+      <Label fx:id="pNotice" layoutX="64.0" layoutY="246.0" prefHeight="15.0" prefWidth="330.0" textFill="#dd0b0b" />
+      <AnchorPane fx:id="connectWarning" layoutX="39.0" layoutY="468.0" prefHeight="23.0" prefWidth="359.0" visible="false">
+         <ImageView fx:id="warning" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+         <Label layoutX="26.0" prefHeight="23.0" prefWidth="308.0" text="Can't access the database, please check your network" textFill="#dd0b0b" />
+      </AnchorPane>
+   </children>
+</AnchorPane>

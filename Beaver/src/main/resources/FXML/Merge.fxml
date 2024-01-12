@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../CSS/MainWindow.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MergeController">
+   <children>
+      <TabPane fx:id="ChartsContainer" layoutX="24.0" layoutY="259.0" prefHeight="326.0" prefWidth="752.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="DR_Chart">
+               <content>
+                  <AnchorPane fx:id="Shot" minHeight="0.0" minWidth="0.0" prefHeight="283.0" prefWidth="752.0">
+                     <children>
+                        <LineChart fx:id="DR_Chart" animated="false" prefHeight="301.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <xAxis>
+                              <CategoryAxis animated="false" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Loglike_Chart">
+               <content>
+                  <AnchorPane fx:id="Shot2" minHeight="0.0" minWidth="0.0" prefHeight="283.0" prefWidth="752.0">
+                     <children>
+                        <LineChart fx:id="LogLike_Chart" animated="false" prefHeight="262.0" prefWidth="766.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label layoutX="73.0" layoutY="29.0" prefHeight="22.0" prefWidth="110.0" text="Original Chart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="RecordsBox" layoutX="217.0" layoutY="25.0" prefHeight="30.0" prefWidth="186.0" />
+      <Label layoutX="452.0" layoutY="28.0" prefHeight="22.0" prefWidth="110.0" text="Set Series Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SeriesName" layoutX="591.0" layoutY="25.0" prefHeight="30.0" prefWidth="153.0" />
+      <Label layoutX="73.0" layoutY="129.0" prefHeight="22.0" prefWidth="121.0" text="Comparison Chart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="217.0" layoutY="83.0" prefHeight="156.0" prefWidth="442.0">
+         <content>
+            <VBox fx:id="ComparisonBox" prefHeight="150.0" prefWidth="422.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="AddBtn" layoutX="688.0" layoutY="174.0" mnemonicParsing="false" onAction="#AddComparison" prefHeight="26.0" prefWidth="85.0" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="MergeBtn" layoutX="688.0" layoutY="212.0" mnemonicParsing="false" onAction="#Merge" prefHeight="26.0" prefWidth="86.0" text="Merge">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ExportDRChart" disable="true" layoutX="500.0" layoutY="263.0" mnemonicParsing="false" onAction="#ExportDRChart" prefHeight="26.0" prefWidth="138.0" text="Export DR Chart">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ExportLogChart" disable="true" layoutX="640.0" layoutY="263.0" mnemonicParsing="false" onAction="#ExportLogChart" prefHeight="26.0" prefWidth="137.0" text="Export Loglike Chart">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="ShowSymbolCheck" layoutX="350.0" layoutY="265.0" mnemonicParsing="false" onAction="#ShowSymbols" selected="true" text="Show Symbols">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

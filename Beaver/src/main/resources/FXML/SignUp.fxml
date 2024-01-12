@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignUpController">
+   <children>
+      <Text fill="#5c8ef2" layoutX="158.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" textAlignment="CENTER" wrappingWidth="143.36328125">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="#5c8ef2" layoutX="59.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#5c8ef2" layoutX="58.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email address">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#5c8ef2" layoutX="58.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#5d91f0" layoutX="58.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm password">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="58.0" layoutY="118.0" prefHeight="18.0" prefWidth="350.0" promptText="2-15 letters" styleClass="textField2" stylesheets="@../CSS/SignIn_Up.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="-2.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="email" layoutX="58.0" layoutY="184.0" prefHeight="20.0" prefWidth="350.0" promptText="Please enter correct email format" styleClass="textField2" stylesheets="@../CSS/SignIn_Up.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="-2.0" />
+         </padding>
+      </TextField>
+      <PasswordField fx:id="password" layoutX="58.0" layoutY="252.0" prefHeight="18.0" prefWidth="350.0" promptText="8-16 chars include 0-9, a-z, A-Z and special char" styleClass="textField2" stylesheets="@../CSS/SignIn_Up.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="-2.0" />
+         </padding>
+      </PasswordField>
+      <PasswordField fx:id="confirm" layoutX="58.0" layoutY="319.0" prefHeight="4.0" prefWidth="350.0" promptText="Please input the same password as above" styleClass="textField2" stylesheets="@../CSS/SignIn_Up.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <padding>
+            <Insets top="-2.0" />
+         </padding>
+      </PasswordField>
+      <Button fx:id="SignUpBtn" alignment="CENTER" layoutX="58.0" layoutY="409.0" mnemonicParsing="false" onAction="#signUp" prefHeight="41.0" prefWidth="350.0" styleClass="button1" stylesheets="@../CSS/SignIn_Up.css" text="Sign Up" textFill="#fcf6f6">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="19.0" />
+         </font>
+      </Button>
+      <Text fill="#00000077" layoutX="58.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By clicking Next, you agree our Terms and that you have read our Data Policy." wrappingWidth="350.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Button alignment="BOTTOM_LEFT" layoutX="240.0" layoutY="470.0" mnemonicParsing="false" onAction="#jumpToSignIn" prefHeight="18.0" prefWidth="203.0" styleClass="button2" stylesheets="@../CSS/SignIn_Up.css" text="Already have an account?" textFill="#4d7ae4">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="unNotice" layoutX="57.0" layoutY="141.0" prefHeight="15.0" prefWidth="350.0" textFill="#e40c0c" />
+      <Label fx:id="eNotice" layoutX="58.0" layoutY="207.0" prefHeight="15.0" prefWidth="350.0" textFill="#e40c0c" />
+      <Label fx:id="pNotice" layoutX="58.0" layoutY="275.0" prefHeight="15.0" prefWidth="350.0" textFill="#e40c0c" />
+      <Label fx:id="cpNotice" layoutX="57.0" layoutY="342.0" prefHeight="15.0" prefWidth="350.0" textFill="#e40c0c" />
+      <AnchorPane fx:id="connectWarning" layoutX="39.0" layoutY="345.0" prefHeight="23.0" prefWidth="359.0" visible="false">
+         <ImageView fx:id="warning" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+         <Label layoutX="26.0" prefHeight="23.0" prefWidth="308.0" text="Can't access the database, please check your network" textFill="#dd0b0b" />
+      </AnchorPane>
+   </children>
+</AnchorPane>
